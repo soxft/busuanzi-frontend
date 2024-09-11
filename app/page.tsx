@@ -166,9 +166,9 @@ const Home = () => {
       </Card>
 
       <footer className="text-center mt-8">
-        <Button variant="outline" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" onClick={() => window.open("https://github.com/soxft/busuanzi")}>
+        {/* <Button variant="outline" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" onClick={() => window.open("https://github.com/soxft/busuanzi")}>
           <Star className="mr-2 h-4 w-4" /> 在 GitHub 上支持我们
-        </Button>
+        </Button> */}
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
           © {new Date().getFullYear()} <a href="//www.xsot.cn">xcsoft</a>. All rights reserved.
         </p>
