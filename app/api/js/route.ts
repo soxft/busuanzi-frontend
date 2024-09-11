@@ -12,7 +12,12 @@ export async function GET() {
     const cachedData = await kv.get(CACHE_KEY);
 
     // 返回 javascript
-    if (cachedData) return new Response(cachedData as BodyInit, { headers: { 'Content-Type': 'text/javascript; charset=utf-8', "cache": "true" } });
+    if (cachedData) return new Response(cachedData as BodyInit, {
+        headers: {
+            'Content-Type': 'text/javascript; charset=utf-8',
+            'Cache-Control': 'public, max-age=2592000',
+        }
+    });
 
     try {
         const response = await fetch(`${url}/js`);
@@ -23,7 +28,12 @@ export async function GET() {
         // 将获取的数据存储到 Vercel KV 中，并设置过期时间
         await kv.set(CACHE_KEY, data, { ex: CACHE_DURATION });
 
-        return new Response(data, { headers: { 'Content-Type': 'text/javascript; charset=utf-8', "cache": "false" } });
+        return new Response(data, {
+            headers: {
+                'Content-Type': 'text/javascript; charset=utf-8',
+                'Cache-Control': 'public, max-age=2592000',
+            }
+        });
 
     } catch (error) {
         return NextResponse.json({ error: (error as Error).message }, { status: 500 });
