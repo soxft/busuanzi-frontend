@@ -2,19 +2,19 @@
     "rewrites": [
         {
             "source": "/js",
-            "destination": "${env.API_URL}/js"
+            "destination": "https://bsz.iirose.cn/js"
         },
         {
             "source": "/script",
-            "destination": "${env.API_URL}/js"
+            "destination": "https://bsz.iirose.cn/js"
         },
         {
             "source": "/(.*).js",
-            "destination": "${env.API_URL}/js"
+            "destination": "https://bsz.iirose.cn/js"
         },
         {
             "source": "/api",
-            "destination": "${env.API_URL}/api"
+            "destination": "https://bsz.iirose.cn/api"
         },
         {
             "source": "/(.*)",
