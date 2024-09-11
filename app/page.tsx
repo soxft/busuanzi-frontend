@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { lazy, Suspense, useEffect, useMemo, useState } from "react"
-import { Star, Link, Check, Copy } from "lucide-react"
+import { Link, Check, Copy } from "lucide-react"
 import { bsz } from "@/lib/utils"
 
 const Home = () => {
