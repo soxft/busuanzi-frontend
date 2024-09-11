@@ -1,0 +1,24 @@
+{
+    "rewrites": [
+        {
+            "source": "/js",
+            "destination": "${env.API_URL}/js"
+        },
+        {
+            "source": "/script",
+            "destination": "${env.API_URL}/js"
+        },
+        {
+            "source": "/(.*).js",
+            "destination": "${env.API_URL}/js"
+        },
+        {
+            "source": "/api",
+            "destination": "${env.API_URL}/api"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
+}
