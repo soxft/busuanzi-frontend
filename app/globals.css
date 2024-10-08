@@ -19,6 +19,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'LXGW WenKai Screen', Arial, Helvetica, sans-serif;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, 和 Opera */
 }
 
 code {
