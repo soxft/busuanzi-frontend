@@ -132,8 +132,7 @@ const Home = () => {
           <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
             <li>不蒜子是一款不错的访问量统计工具</li>
             <li>
-              本站模仿其功能，通过 Golang + Redis 实现{" "}
-              <del>需要注意，本站无SLA保证</del>
+              本站模仿其功能，通过 Golang + Redis 实现, 需要注意，本站无 SLA 与数据完整保证
             </li>
             <li>
               后端部署于阿里云上海，使用本站时，我们可能会收集您的访问记录以用于数据统计、分析、展示
