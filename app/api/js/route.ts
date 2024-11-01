@@ -16,6 +16,7 @@ export async function GET() {
         headers: {
             'Content-Type': 'text/javascript; charset=utf-8',
             'Cache-Control': 'public, max-age=2592000',
+            'X-Cache': 'HIT'
         }
     });
 
@@ -32,6 +33,7 @@ export async function GET() {
             headers: {
                 'Content-Type': 'text/javascript; charset=utf-8',
                 'Cache-Control': 'public, max-age=2592000',
+                'X-Cache': 'MISS'
             }
         });
 
