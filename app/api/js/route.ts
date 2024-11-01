@@ -32,7 +32,6 @@ export async function GET() {
         return new Response(data, {
             headers: {
                 'Content-Type': 'text/javascript; charset=utf-8',
-                'Cache-Control': 'public, max-age=2592000',
                 'X-Cache': 'MISS'
             }
         });
