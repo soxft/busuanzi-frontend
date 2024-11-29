@@ -9,12 +9,12 @@ const nextConfig = {
                 destination: "/api/js",
             },
             {
-                source: '/script',
-                destination: "/api/js",
+                source: '/js/:path',
+                destination: "/api/js/:path",
             },
             {
-                source: '/(.*).js',
-                destination: "/api/js",
+                source: '/js/:path/:file',
+                destination: "/api/js/:path/:file",
             },
             {
                 source: '/api',

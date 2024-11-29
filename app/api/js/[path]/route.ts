@@ -1,14 +1,19 @@
 // app/api/js/route.ts
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
 
 const CACHE_DURATION = 24 * 60 * 60 * 10; // 10 days in seconds
 
 const url = process.env.API_URL || "https://bsz.iirose.cn";
 
-export async function GET() {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { path: string } }
+) {
   // 尝试从 KV 中获取缓存的数据
-  const CACHE_KEY = `js_data`;
+  const path = params.path;
+  console.log(path);
+  const CACHE_KEY = `js_data_${path}`;
 
   const cachedData = await kv.get(CACHE_KEY);
 
@@ -23,7 +28,7 @@ export async function GET() {
     });
 
   try {
-    const response = await fetch(`${url}/js`);
+    const response = await fetch(`${url}/js/${path}`);
     if (!response.ok) throw new Error("Network response was not ok");
 
     const data = await response.text();
@@ -34,7 +39,7 @@ export async function GET() {
       false
     ) {
       console.log(response.headers.get("Content-Type"));
-      return NextResponse.redirect("/");
+      return NextResponse.redirect(new URL("/", req.url));
     }
 
     // 将获取的数据存储到 Vercel KV 中，并设置过期时间
