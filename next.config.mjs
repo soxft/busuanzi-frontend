@@ -13,10 +13,6 @@ const nextConfig = {
                 destination: "/api/js/:path",
             },
             {
-                source: '/js/:path/:file',
-                destination: "/api/js/:path/:file",
-            },
-            {
                 source: '/api',
                 destination: `${process.env.API_URL}/api`,
             },
