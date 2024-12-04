@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <head>
         <meta charSet="utf-8" />
-        <link rel="shortcut icon" href="https://static.iirose.cn/bsz/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://font.onmicrosoft.cn/lxgw-wenkai-screen-webfont@1.6.0/style.css" />
         <link href="https://static.iirose.cn/font/JetBrainMono/JetbrainMono.css" rel="stylesheet" />
         <link href="https://static.iirose.cn/highlight/atom-one-dark.css" type="text/css" rel="stylesheet" />
