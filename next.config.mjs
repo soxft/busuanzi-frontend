@@ -17,6 +17,10 @@ const nextConfig = {
                 destination: `${process.env.API_URL}/api`,
             },
             {
+                source: '/jsonp',
+                destination: `${process.env.API_URL}/jsonp`,
+            },
+            {
                 source: '/(.*)',
                 destination: '/',
             },
