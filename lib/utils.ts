@@ -1,17 +1,23 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 interface bsz {
-  site_pv: string,
-  site_uv: string,
-  page_pv: string,
-  page_uv: string
+  site_pv: string;
+  site_uv: string;
+  page_pv: string;
+  page_uv: string;
 }
 
-export { cn }
+interface Resp {
+  success: boolean;
+  data: bsz;
+  code: number;
+}
 
-export type { bsz }
+export { cn };
+
+export type { bsz, Resp };

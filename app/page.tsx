@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { Link, Check, Copy } from "lucide-react";
-import { bsz } from "@/lib/utils";
+import { bsz, Resp } from "@/lib/utils";
 
 const Home = () => {
   const CodeBlock = lazy(() => import("@/components/CodeBlock"));
@@ -37,6 +37,17 @@ const Home = () => {
     setTimeout(() => setIsCopied(false), 2000);
   };
 
+  const format = (num: number, style: string = "default"): string => {
+    if (style === "comma") return num.toLocaleString();
+    if (style === "short") {
+      const units = ["", "K", "M", "B", "T"];
+      const index = Math.floor(Math.log10(num) / 3);
+      num /= Math.pow(1000, index);
+      return `${Math.round(num * 100) / 100}${units[index]}`;
+    }
+    return num.toString();
+  };
+
   useEffect(() => {
     const token = localStorage.getItem("bsz-id");
 
@@ -48,9 +59,15 @@ const Home = () => {
       },
     })
       .then(async (res) => {
-        const data = await res.json();
+        const data: Resp = await res.json();
         if (data.success === true) {
-          setBsz(data["data"]);
+          const bsz = data.data;
+          bsz.site_pv = format(parseInt(bsz.site_pv), "short");
+          bsz.site_uv = format(parseInt(bsz.site_uv), "short");
+          bsz.page_pv = format(parseInt(bsz.page_pv), "short");
+          bsz.page_uv = format(parseInt(bsz.page_uv), "short");
+
+          setBsz(bsz);
 
           const setIdentity = res.headers.get("Set-Bsz-Identity");
           if (setIdentity != null && setIdentity != "")
@@ -132,7 +149,8 @@ const Home = () => {
           <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
             <li>不蒜子是一款不错的访问量统计工具</li>
             <li>
-              本站模仿其功能，通过 Golang + Redis 实现, 需要注意，本站无 SLA 与数据完整保证
+              本站模仿其功能，通过 Golang + Redis 实现, 需要注意，本站无 SLA
+              与数据完整保证
             </li>
             <li>
               后端部署于阿里云上海，使用本站时，我们可能会收集您的访问记录以用于数据统计、分析、展示
