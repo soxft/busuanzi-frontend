@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "自建不蒜子 - 网站访问量统计",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <link href="https://static.iirose.cn/font/JetBrainMono/JetbrainMono.css" rel="stylesheet" />
         <link href="https://static.iirose.cn/highlight/atom-one-dark.css" type="text/css" rel="stylesheet" />
         <Script defer src="https://um.cmds.run/script.js" data-website-id="3e7b147b-778d-44f6-8e77-86afd47070c0" />
+        <SpeedInsights/>
       </head>
       <body>
         {children}
