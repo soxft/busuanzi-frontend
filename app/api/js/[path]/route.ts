@@ -4,7 +4,7 @@ import { kv } from "@vercel/kv";
 
 const CACHE_DURATION = 24 * 60 * 60 * 10; // 10 days in seconds
 
-const url = process.env.API_URL || "https://bsz.cmds.run";
+const url = process.env.API_URL || "https://bsz.iirose.cn";
 
 export async function GET(
   req: NextRequest,

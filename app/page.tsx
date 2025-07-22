@@ -51,7 +51,7 @@ const Home = () => {
   useEffect(() => {
     const token = localStorage.getItem("bsz-id");
 
-    fetch("https://bsz.cmds.run/api", {
+    fetch("https://bsz.iirose.cn/api", {
       method: "POST",
       headers: {
         Authorization: token ? `Bearer ${token}` : "",
