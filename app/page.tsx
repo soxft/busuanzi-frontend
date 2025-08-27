@@ -259,6 +259,18 @@ const Home = () => {
           © {new Date().getFullYear()} <a href="//www.xsot.cn">xcsoft</a>. All
           rights reserved.
         </p>
+        <a 
+          href="https://www.netlify.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block mt-3 opacity-60 hover:opacity-100 transition-opacity duration-200"
+        >
+          <img 
+            alt="Deploys by Netlify" 
+            src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
+            className="h-8"
+          />
+        </a>
       </footer>
     </div>
   );
