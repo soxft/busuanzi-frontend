@@ -251,26 +251,26 @@ const Home = () => {
         </CardContent>
       </Card>
 
-      <footer className="text-center mt-8">
-        {/* <Button variant="outline" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" onClick={() => window.open("https://github.com/soxft/busuanzi")}>
-          <Star className="mr-2 h-4 w-4" /> 在 GitHub 上支持我们
-        </Button> */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-          © {new Date().getFullYear()} <a href="//www.xsot.cn">xcsoft</a>. All
-          rights reserved.
-        </p>
-        <a 
-          href="https://www.netlify.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-block mt-3 opacity-60 hover:opacity-100 transition-opacity duration-200"
-        >
-          <img 
-            alt="Deploys by Netlify" 
-            src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
-            className="h-8"
-          />
-        </a>
+      <footer className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex flex-col items-center space-y-3">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            © {new Date().getFullYear()} <a href="//www.xsot.cn" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">xcsoft</a>. All rights reserved.
+          </p>
+          <div className="flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500">
+            <span>Deployed on</span>
+            <a 
+              href="https://www.netlify.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            >
+              <svg className="h-4 w-4 ml-1" viewBox="0 0 40 40" fill="currentColor">
+                <path d="M28.589 14.135l-.014-.006c-.008-.003-.016-.006-.023-.013a.11.11 0 01-.028-.093l.773-4.726 3.625 3.626-3.77 1.604a.083.083 0 01-.033.006h-.015a.104.104 0 01-.02-.003.092.092 0 01-.025-.01.088.088 0 01-.03-.026.088.088 0 01-.025-.037zm5.258-.288l3.876 3.876c.805.806 1.208 1.208 1.355 1.674.022.069.04.138.054.209l-9.263-3.923a.728.728 0 00-.015-.006c-.037-.015-.08-.032-.08-.07 0-.038.044-.056.081-.071l.012-.005 3.98-1.684zm5.127 7.003c-.2.376-.59.766-1.25 1.427l-4.37 4.369-5.652-1.177-.03-.006c-.05-.008-.103-.017-.103-.062a1.706 1.706 0 00-.655-1.193c-.023-.023-.017-.059-.01-.092 0-.005 0-.01.002-.014l1.063-6.526.004-.022c.006-.05.015-.108.06-.108a1.73 1.73 0 001.16-.665c.009-.01.015-.021.027-.027.032-.015.07 0 .103.014l9.65 4.082zm-6.625 6.801l-7.186 7.186 1.23-7.56.002-.01a.136.136 0 01.006-.029c.01-.024.036-.034.061-.044l.012-.005a1.85 1.85 0 00.695-.517c.024-.028.053-.055.09-.055.035 0 .06.02.086.038l5.004 1.05zm-10.362 8.193l-.006.006-6.542-11.03a2.048 2.048 0 00.958-1.27c.024-.065.05-.076.107-.076.035 0 .063.008.094.02a2.09 2.09 0 00.99.183h.008a.154.154 0 01.03.002c.018 0 .034.006.05.012l6.477 1.343-2.166 10.81zM8.211 37.342c-1.24-2.09-2.425-4.094-2.702-4.576a.56.56 0 01-.049-.186c0-.015 0-.029.002-.043l.136-.829 6.472 10.911-3.86-5.276zm-2.23-8.311l1.491-9.164c.008-.05.016-.108.076-.108a1.78 1.78 0 00.982-.524c.026-.031.054-.062.093-.062.03 0 .055.013.08.027l10.988 5.778a2.048 2.048 0 00-.675 1.355c0 .031-.01.052-.028.07-.017.017-.036.021-.056.025l-12.951 2.603zm3.645-11.312l6.695-6.695 3.62 6.1-4.145 2.183a.136.136 0 01-.03.012c-.024.01-.05.02-.05.055a1.779 1.779 0 00-.553 1.01c-.008.03-.016.06-.042.06-.025 0-.042-.02-.063-.04l-5.432-2.685zm9.91-8.91C19.778 8.568 20.779 8 21.283 8c.295 0 .577.124.855.288l6.367 10.732-4.779 2.518a.156.156 0 01-.035.016.106.106 0 01-.05.006c-.037 0-.07-.022-.09-.05a2.02 2.02 0 00-1.499-.676c-.047 0-.066-.032-.081-.066l-.007-.012-2.429-11.95zm10.391 1.375c.007.007.012.013.019.021.005.007.012.013.017.02l5.129 8.642a.16.16 0 01.015.035c.007.022.01.05.01.073a1.766 1.766 0 00.521 1.106c.03.03.025.077.021.116a.076.076 0 01-.006.023l-4.732.792-3.567-6.01 2.573-4.681z"/>
+              </svg>
+              <span className="ml-1 font-medium">Netlify</span>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
