@@ -62,10 +62,10 @@ const Home = () => {
         const data: Resp = await res.json();
         if (data.success === true) {
           const bsz = data.data;
-          bsz.site_pv = format(parseInt(bsz.site_pv), "short");
-          bsz.site_uv = format(parseInt(bsz.site_uv), "short");
-          bsz.page_pv = format(parseInt(bsz.page_pv), "short");
-          bsz.page_uv = format(parseInt(bsz.page_uv), "short");
+          bsz.site_pv = format(parseInt(bsz.site_pv));
+          bsz.site_uv = format(parseInt(bsz.site_uv));
+          bsz.page_pv = format(parseInt(bsz.page_pv));
+          bsz.page_uv = format(parseInt(bsz.page_uv));
 
           setBsz(bsz);
 
