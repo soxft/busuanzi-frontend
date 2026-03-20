@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://font.onmicrosoft.cn/lxgw-wenkai-screen-webfont@1.6.0/style.css" />
+        <link rel="stylesheet" href="https://static.iirose.cn/font/xgw-wenkai-screen/style.css" />
         <link href="https://static.iirose.cn/font/JetBrainMono/JetbrainMono.css" rel="stylesheet" />
         <link href="https://static.iirose.cn/highlight/atom-one-dark.css" type="text/css" rel="stylesheet" />
         <Script defer src="https://um.cmds.run/script.js" data-website-id="3e7b147b-778d-44f6-8e77-86afd47070c0" />
